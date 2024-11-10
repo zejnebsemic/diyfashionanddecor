@@ -8,16 +8,17 @@ html, body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #dc7ad7;
+    background-color: hwb(338 56% 16%);
     padding: 10px 20px;
     position: relative;
+    width: 100%;
 }
 
 .navbar-brand img {
@@ -43,11 +44,12 @@ html, body {
 }
 
 .nav-links a {
-    color: #441162;
+    color: hsl(300, 4%, 95%);
     text-decoration: none;
     font-weight: 600;
     padding: 10px;
     transition: color 0.3s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .nav-links a:hover {
@@ -92,7 +94,7 @@ html, body {
 .qoute-text {
     margin-top: 15px;
     font-size: xx-large;
-    color: #dc7ad7;
+    color:#cfb799;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
 }
@@ -107,11 +109,11 @@ html, body {
 }
 
 footer {
-    background-color: #dc7ad7;
+    background-color:  hwb(338 56% 16%);
     color: #fff;
     padding: 10px;
     width: 100%;
-    font-size: large;
+    font-size:medium;
     text-align: center;
     margin-top: 10px;
 }
@@ -135,8 +137,88 @@ footer a {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
 }
+  
+#slideshow {
+    text-align: center;
+    overflow: hidden;
+    height: 510px;
+    width: 728px;
+    margin: 0 auto;
+  }
+  
+  .slide-wrapper {
+    width: 5096px;  /* Adjusted for 7 images, each 728px wide (728px * 7 = 5096px) */
+    -webkit-animation: slide 21s ease infinite;  /* Adjusted timing to fit 7 images */
+  }
+  
+  .slide {
+    float: left;
+    height: 510px;
+    width: 728px;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensure images cover the slide area without distortion */
+  }
+  
+  @-webkit-keyframes slide {
+    14% {margin-left: 0px;}
+    21% {margin-left: -728px;}
+    35% {margin-left: -728px;}
+    42% {margin-left: -1456px;}
+    56% {margin-left: -1456px;}
+    63% {margin-left: -2184px;}
+    77% {margin-left: -2184px;}
+    84% {margin-left: -2912px;}
+    98% {margin-left: -2912px;}
+    100% {margin-left: -3640px;}
+  }
+  #naslov {
+    text-align: center; /* Center the heading text */
+    padding: 20px; /* Add some space around the heading */
+    background-color:bisque; /* Give a greenish background */
+    color: #000000; /* White text on the green background */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+
+#naslov h3 {
+    font-size: 2.5em; /* Make the heading large */
+    font-weight: bold; /* Ensure the heading stands out */
+    margin: 0; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+p {
+    font-size: 1.2em; /* Slightly larger text for better readability */
+    line-height: 1.6; /* Increase line height for easier reading */
+    color: #000000; /* A slightly lighter text color */
+    margin-bottom: 15px; /* Space between paragraphs */
+    max-width: 800px; /* Limit paragraph width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
+
+@media (max-width: 600px) {
+    #naslov h3 {
+        font-size: 2em; 
+    }
+
+    p {
+        font-size: 1em; 
+    }
+}
+  
+  
+  
 
 
 
