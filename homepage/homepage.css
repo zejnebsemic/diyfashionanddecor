@@ -149,7 +149,7 @@ footer a {
   
   .slide-wrapper {
     width: 5096px;  
-    -webkit-animation: slide 21s ease infinite;  
+    animation: slide 21s ease infinite;  
   }
   
   .slide {
@@ -164,7 +164,7 @@ footer a {
     object-fit: cover;  
   }
   
-  @-webkit-keyframes slide {
+  @keyframes slide {
     14% {margin-left: 0px;}
     21% {margin-left: -728px;}
     35% {margin-left: -728px;}
