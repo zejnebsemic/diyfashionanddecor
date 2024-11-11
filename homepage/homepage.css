@@ -213,6 +213,134 @@ p {
         font-size: 1em; 
     }
 }
+
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color:bisque;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color:#6c757d;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.btn-close {
+    color: #333;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body .form-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.modal-body .form-control {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+.modal-body .form-control:focus {
+    border-color:bisque;
+    box-shadow: 0px 0px 5px bisque;
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+    color:#5a6268;
+}
+
+.modal-footer {
+    border-top: 1px solid #e9ecef;
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
+.btn-primary {
+    background-color:bisque;
+    border-color:bisque;
+    transition:bisque 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color:bisque;
+    border-color:#555;
+}
+
+.btn-secondary {
+    background-color:bisque;
+    border-color: #6c757d;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color:bisque;
+    border-color:#555 ;
+}
+
+@media (max-width: 576px) {
+    .modal-content {
+        border-radius: 0;
+    }
+}
+
+#contactModal .modal-content {
+    background-color: #fffaf0; 
+    color: #d2691e; 
+    border-radius: 8px;
+}
+
+#contactModal .modal-header,
+#contactModal .modal-footer {
+    border: none;
+}
+
+#contactModal .modal-title {
+    color: #d2691e;
+}
+
+#contactModal .form-label {
+    font-weight: bold;
+    color: #d2691e; 
+}
+
+#contactModal a {
+    color: #d2691e;
+    text-decoration: none;
+}
+
+#contactModal a:hover {
+    color: #a0522d; 
+    text-decoration: underline;
+}
+
+#contactModal .btn-close {
+    background-color: #d2691e;
+    border: none;
+}
+
+#contactModal .btn-secondary {
+    background-color: #d2691e;
+    border-color: #d2691e;
+    color: #fff;
+}
+
+#contactModal .btn-secondary:hover {
+    background-color:#5a6268;
+    border-color:#5a6268;
+}
+
   
   
   

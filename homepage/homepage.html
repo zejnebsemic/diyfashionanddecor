@@ -24,8 +24,8 @@
                 <li><a href="#tutorials" target="_blank">Tutorials</a></li>
                 <li><a href="#about" target="_blank">About Me</a></li>
                 <li><a href="#shop" target="_blank">Shop</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#login">Log In</a></li>
+                <li><a href="login" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a></li>
+                <li><a href="contact" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -81,8 +81,68 @@
               
             </div>
         </div> 
-          
-          
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Log in</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address: </label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password: </label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contact</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                
+                    <div class="modal-body">
+                        <p>You can reach me through any of the following accounts:</p>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">My Email is:</label>
+                            <p><a href="mailto:zejneb.semic@stu.ibu.edu.ba">zejneb.semic@stu.ibu.edu.ba</a></p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="instagram" class="form-label">Instagram account:</label>
+                            <p><a href="https://instagram.com/CraftedWITHLove" target="_blank">@CraftedWITHLove</a></p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="facebook" class="form-label">Facebook group:</label>
+                            <p><a href="https://facebook.com/CraftedWITHLOVE" target="_blank">CraftedWITHLOVE</a></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 </div>
     
     
