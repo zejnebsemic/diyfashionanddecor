@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials Page</title>
+    <link rel="stylesheet" href="/css/tutorials.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .section {
+          padding: 60px 20px;
+          color: white;
+          margin-top: 10px;
+          background-color: aliceblue;
+        }
+       #section1 { background-color: #973b5f; }
+       #section2 { background-color: #973b5f; }
+       #section3 { background-color:#973b5f; }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <div class="navbar">
+        <a class="active" href="homepage.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="tutorials.html" target="_blank"><i class="fa fa-fw fa-lightbulb-o"></i> Tutorials</a>
+        <a href="aboutmePage.html" target="_blank"><i class="fa fa-fw fa-user"></i> About Us</a>
+        <a href="loginPage.html"><i class="fa fa-fw fa-sign-in"></i> Log In</a>
+        <a href="#contactModal" class="open-modal-button">Contact Us</a>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <h5 class="modal-title">Contact Us</h5>
+            <form>
+                <div class="form-group">
+                    <label for="contactName">Name</label>
+                    <input type="text" id="contactName" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email address</label>
+                    <input type="email" id="contactEmail" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" rows="3" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <div class="maincontainer2">
+        <div class="col-12 image-container">
+            <img src="../pictures/bannerTutorials.jpeg" alt="Banner image" class="img-fluid">
+        </div>
+        <h1 class="heading3" >Creative: Step-by-Step DIY Tutorials for Fashion and Decor</h1>
+        <div class="row1">
+            <div class="standard-column">
+                Welcome to our Tutorials page! Here, you'll find a curated collection of DIY projects designed to inspire and guide you in transforming everyday items into unique fashion and decor pieces.
+            </div> 
+            <div class="standard-column">
+                Whether you're a beginner or a seasoned DIY enthusiast, our step-by-step tutorials make it easy to add a personal touch to your style and space. Dive in and discover how creativity and a few simple materials can bring your ideas to life!
+            </div>
+        </div>
+        
+        <div id="section1" class="section">
+            <h1>Welcome to our Fashion DIY section!</h1> <br>
+            <p><strong>Clothing Customization- Personalize your clothes according to your individual preferences.</strong></p>
+            <p><strong>CUpcycled Treasures- Transform your old things into valuable creations.</strong></p>
+            <p><strong>Sustainable Fashion- Sustainable clothing with a focus on durability.</strong></p>
+        </div>
+    
+      <div class="gallery-container">
+         <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="../pictures/fashion1pic.jpeg">
+                <img src="../pictures/fashion1pic.jpeg" alt="Clothing Customization" width="350" height="400">
+                </a>
+             <div class="desc">Here’s the step-by-step illustration for DIY clothing customization, including embroidery on a shirt and painting on denim.</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="../pictures/fashion2Pic.jpeg">
+                <img src="../pictures/fashion2Pic.jpeg" alt="Upcycled Treasures" width="350" height="400">
+                </a>
+                <div class="desc">Here is the step-by-step illustration for transforming old clothes into unique, fashion-forward creations</div>
+          </div>
+        </div>
+          
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="../pictures/fashion3Pic.jpeg">
+                <img src="../pictures/fashion3Pic.jpeg" alt="Eco-friendly fashion" width="350" height="400">
+                </a>
+                <div class="desc">Here is the step-by-step illustration for dyeing a T-shirt using natural dyes, showing the materials and dyeing process for a vibrant eco-friendly color.</div>
+          </div>
+        </div>
+          <div class="clearfix"></div>
+        </div>
+          
+        
+        <div id="section2" class="section">
+            <h1>Welcome to our Home Decor section!</h1> <br>
+            <p><strong>Wall Art Wonders- A unique work that enhances the space on the wall and personalizes.</strong></p>
+            <p><strong>Cozy Textiles- Soft and comfort fabric for warmth and style.</strong></p>
+            <p><strong>Seasonal Decor- Decorations that celebrate and reflect each season of the year.</strong></p>
+        </div>
+        <div class="gallery-container">
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="../pictures/decor1Pic.jpeg">
+                    <img src="../pictures/decor1Pic.jpeg" alt="Wall Art" width="350" height="400">
+                    </a>
+                 <div class="desc">Here is the step-by-step instructional illustration for painting a DIY flower mural on the wall, guiding you through each stage, from sketching the outline to adding detailed colors and textures. </div>
+                </div>
+            </div>
+    
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="../pictures/decor2Pic.jpeg">
+                    <img src="../pictures/decor2Pic.jpeg" alt="Homemade pillows" width="350" height="400">
+                    </a>
+                    <div class="desc">Here’s the step-by-step instructional illustration for making homemade pillows, covering each stage from cutting the fabric to stuffing and sewing it closed.</div>
+              </div>
+            </div>
+              
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="../pictures/decor3Pic.jpeg">
+                    <img src="../pictures/decor3Pic.jpeg" alt="Eco-friendly fashion" width="350" height="400">
+                    </a>
+                    <div class="desc">Here is the step-by-step instructional illustration for creating a DIY ornament for a Christmas tree, showing each stage from preparing materials to adding festive decorations and finishing touches.</div>
+              </div>
+            </div>
+              <div class="clearfix"></div>
+        </div>
+        
+        <div id="section3" class="section">
+            <h1>Welcome to our Personalized Gifts section!</h1> <br>
+            <p><strong>Custom Mugs and Glassware- Personalised glasses that reflect your personal style.</strong></p>
+            <p><strong>Unique Photo Frames- Unique frames represent cherished memories.</strong></p>
+            <p><strong>Keepsake Boxes- Decorative storage for valuables and keepsakes.</strong></p>
+        </div>
+        
+        <div class="gallery-container">
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="../pictures/giftsPic1.jpeg">
+                    <img src="../pictures/giftsPic1.jpeg" alt="Custom Mugs" width="350" height="400">
+                    </a>
+                 <div class="desc">Here are the step-by-step instructional illustrations for hand-painting a mug, from gathering materials to applying the final sealant and curing the design. </div>
+                </div>
+            </div>
+    
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="../pictures/giftsPic2.jpeg">
+                    <img src="../pictures/giftsPic2.jpeg" alt="Homemade pillows" width="350" height="400">
+                    </a>
+                    <div class="desc">Here’s the step-by-step instructional illustration for creating a unique DIY photo frame, showing each stage from painting the frame to adding decorative elements and sealing the design.</div>
+              </div>
+            </div>
+              
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="../pictures/giftsPic3.jpeg">
+                    <img src="../pictures/giftsPic3.jpeg" alt="Eco-friendly fashion" width="350" height="400">
+                    </a>
+                    <div class="desc">Here are the step-by-step instructional illustrations for crafting a jewelry box, guiding you through each stage, from preparing materials to adding final decorative touches and creating compartments inside.</div>
+              </div>
+            </div>
+              <div class="clearfix"></div>
+        </div>
+<div style="overflow-x:auto">
+    <div class="secondcontainer"> 
+        <h2 style="color: #973b5f;">Fashion</h2>
+        <table id="customers">
+            <tr>
+                <th>Project</th>
+                <th>Tools</th>
+                <th>Materials</th>
+            </tr>
+
+            <tr>
+                <td>Clothing Customization</td>
+                <td>Needles, Fabric Paint Brushes, Scissors, Sandpaper</td>
+                <td>Embroidery Floss, Fabric Paint, Fabric Chalk</td>
+            </tr>
+
+            <tr>
+                <td>Upcycled Treasures</td>
+                <td>Sewing Machine, Scissors, Glue Gun</td>
+                <td>Old Clothes, Patches, Buttons</td>
+            </tr>
+
+            <tr>
+                <td>Sustainable Fashion</td>
+                <td>Dye Pots, Gloves, Brushes</td>
+                <td>Natural Dyes, Organic Cotton, Hemp Fabric</td>
+            </tr>
+        </table>
+</div>
+
+  <h2 style="color: #973b5f;">Decoration</h2>
+  <table id="customers">
+    <tr>
+      <th>Project</th>
+      <th>Tools</th>
+      <th>Materials</th>
+    </tr>
+    <tr>
+      <td>Wall Art Wonders</td>
+      <td>Paint Brushes, Canvas, Tape</td>
+      <td>Acrylic Paint, Canvases, Stencils</td>
+    </tr>
+    <tr>
+      <td>Cozy Textiles</td>
+      <td>Sewing Kit, Sewing Machine, Fabric Scissors</td>
+      <td>Fabric (Cotton, Linen, Fleece), Pillow Stuffing</td>
+    </tr>
+    <tr>
+      <td>Seasonal Decor</td>
+      <td>Hot Glue Gun, Wire Cutters, Floral Foam</td>
+      <td>Faux Flowers, Seasonal Greenery, Ribbons</td>
+    </tr>
+  </table>
+
+  <h2 style="color: #973b5f">Personalized Gifts</h2>
+  <table id="customers">
+    <tr>
+      <th>Project</th>
+      <th>Tools</th>
+      <th>Materials</th>
+    </tr>
+    <tr>
+      <td>Custom Mugs & Glassware</td>
+      <td>Paintbrushes, Oven (for curing paint)</td>
+      <td>Glass Paint, Plain Mugs, Plain Glasses</td>
+    </tr>
+    <tr>
+      <td>Unique Photo Frames</td>
+      <td>Sandpaper, Paintbrushes, Glue</td>
+      <td>Wooden Frames, Paint, Mod Podge</td>
+    </tr>
+    <tr>
+      <td>Keepsake Boxes</td>
+      <td>Paint Brushes, Sandpaper, Glue Gun</td>
+      <td>Wooden Boxes, Paint, Varnish</td>
+    </tr>
+  </table>
+ </div>
+</div>
+<footer class="text-center py-4">
+    <p>Zejneb Semic</p>
+    <p><a href="mailto:zejneb.semic@stu.ibu.edu.ba">zejneb.semic@stu.ibu.edu.ba</a></p>
+    <p class="department fw-bold">IT Department</p>
+    <p class="course fw-bold">Foundations of Web Development</p>
+    <h6>©2024 Copyright: Zejneb Semic</h6>
+</footer>
+
+</body>
+</html>
