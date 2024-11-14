@@ -13,7 +13,7 @@ html, body {
 .navbar {
     width: 100%;
     background-color:hwb(338 56% 16%);
-    overflow: auto;
+    overflow:auto;
 }
 
 .navbar a {
@@ -102,7 +102,6 @@ footer {
     text-align: center;
     margin-top: 10px;
     width:auto;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 footer a {
