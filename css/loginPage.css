@@ -8,39 +8,38 @@ html, body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+
 .navbar {
-  width: 100%;
-  background-color:hwb(338 56% 16%);
-  overflow:auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+  background-color: hsl(338, 46.6666666667%, 70%);
 }
-
 .navbar a {
-  float: left;
+  padding: 0 12px;
   text-align: center;
-  padding: 12px;
   color: white;
-  text-decoration:underline;
+  text-decoration: underline;
   font-size: 17px;
-  width: 16.66%; 
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  line-height: 60px;
+  width: 16.66%;
+  font-family: inherit;
 }
-
 .navbar a:hover {
-  background-color:rgb(229, 172, 193);
+  background-color: rgb(229, 172, 193);
 }
-
-.active {
-  background-color:hwb(338 41% 24%);
+.navbar .active {
+  background-color: hsl(338, 42.1686746988%, 58.5%);
 }
-
-.menu-toggle {
+.navbar .menu-toggle,
+.navbar .menu-icon {
   display: none;
 }
-
-.menu-icon {
-  display: none;
+.navbar .menu-icon {
   font-size: 24px;
   color: white;
   cursor: pointer;
@@ -49,51 +48,49 @@ html, body {
   width: 100%;
   background-color: #555;
 }
-
 @media screen and (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
   .navbar a {
-      float: none;
-      display: block;
-      width: 100%;
+    width: 100%;
+    text-align: center;
   }
 }
+
 .open-modal-button {
   display: inline-block;
   padding: 10px 20px;
-  color: #fff;
+  color: white;
   text-decoration: none;
   border-radius: 5px;
 }
 
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: hwb(338 41% 24%); 
+  background-color: hsl(338, 42.1686746988%, 58.5%);
   z-index: 1000;
 }
-
-
 .modal:target {
-  display:block;
+  display: block;
 }
-
-
-.modal-content {
+.modal .modal-content {
   position: relative;
-  background-color:floralwhite;
-  margin: 10% auto; 
+  background-color: floralwhite;
+  margin: 10% auto;
   padding: 20px;
   width: 80%;
   max-width: 500px;
   border-radius: 8px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
-
-.close {
+.modal .modal-content .close {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -101,105 +98,8 @@ html, body {
   text-decoration: none;
   color: #333;
 }
-
-.close:hover {
-  color:#555;
-}
-
-.modal-title {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color:#db5088;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size:larger;
-  text-align: center;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  font-weight: bold;
-  color:hwb(336 39% 16%);
-  margin-bottom: 5px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.form-group input, .form-group textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid hsl(308, 36%, 84%);
-  border-radius: 4px;
-  font-size: 1rem;
-  background-color: hwb(335 80% 12%);
-}
-
-.submit-button {
-  background-color:hsl(323, 52%, 78%);
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.submit-button:hover {
-  background-color: hsl(312, 63%, 68%);
-}
-
-@media (max-width: 576px) {
-  .modal-content {
-      width: 90%;
-      padding: 15px;
-  }
-}
-
-footer {
-  background-color: hwb(338 56% 16%);
-  color: #fff;
-  position: relative;
-  left: 0;
-  bottom: 0;
-  padding: 10px;
-  width: 100%;
-  font-size: medium;
-  text-align: center;
-  margin-top: 10px;
-  width:auto;
-}
-
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-
-@media (max-width: 576px) {
-  footer {
-      font-size: small;
-      padding: 15px;
-  }
-
-  footer p, footer h6 {
-      margin: 5px 0;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  footer {
-      font-size: medium;
-      padding: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  footer {
-      font-size: large;
-      padding: 25px;
-  }
+.modal .modal-content .close:hover {
+  color: #555;
 }
 
 .title {
@@ -211,54 +111,68 @@ footer a {
   text-align: center;
   font-size: 1.2rem;
 }
+@media (max-width: 600px) {
+  .title {
+    font-size: 1rem;
+    padding: 12px;
+    margin: 15px;
+  }
+}
 
 form {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  margin: 20px;
+  margin: 20px auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 500px;
-  margin: 20px auto;
 }
-
 form h1, form p {
   text-align: center;
   color: #db5088;
   font-size: 1.5rem;
 }
-
-label {
+@media (max-width: 600px) {
+  form h1, form p {
+    font-size: 1.2rem;
+  }
+}
+form label {
   font-weight: bold;
   color: #555;
   display: block;
   margin-bottom: 8px;
 }
-
-input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="date"], select {
+form input[type=text],
+form input[type=password],
+form input[type=email],
+form input[type=tel],
+form input[type=date],
+form select {
   width: 100%;
   padding: 12px;
-  margin: 5px 0 20px 0;
+  margin: 5px 0 19px 0;
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #f9f9f9;
   font-size: 1rem;
 }
-
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="date"]:focus, select:focus {
+form input[type=text]:focus,
+form input[type=password]:focus,
+form input[type=email]:focus,
+form input[type=tel]:focus,
+form input[type=date]:focus,
+form select:focus {
   background-color: #e8f0fe;
   outline: none;
 }
 
-input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-button, .submit-button {
+button,
+.submit-button {
   background-color: #db5088;
   color: white;
-  padding: 14px;
+  padding: 13px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -266,65 +180,93 @@ button, .submit-button {
   font-size: 1rem;
   transition: background-color 0.3s;
 }
-
-button:hover, .submit-button:hover {
+button:hover,
+.submit-button:hover {
   background-color: #b9456d;
 }
-
-@media (max-width: 600px) {
-  .title {
-      font-size: 1rem;
-      padding: 12px;
-      margin: 15px;
-  }
-
-  form {
-      padding: 15px;
-      margin: 15px;
-  }
-
-  form h1, form p {
-      font-size: 1.2rem;
-  }
-
-  button, .submit-button {
-      font-size: 0.9rem;
-      padding: 12px;
-  }
-}
-
 
 .fb, .twitter, .google {
   display: block;
   width: 100%;
-  padding: 12px;
+  padding: 11px;
   text-align: center;
   color: white;
   border-radius: 4px;
   margin: 10px 0;
   font-size: 1rem;
 }
-
-.fb {
-  background-color: hwb(221 35% 15%);
+.fb.fb, .twitter.fb, .google.fb {
+  background-color: hsl(221, 62.5%, 60%);
 }
-
-.twitter {
+.fb.twitter, .twitter.twitter, .google.twitter {
   background-color: hsl(203, 90%, 70%);
 }
-
-.google {
+.fb.google, .twitter.google, .google.google {
   background-color: hsl(7, 99%, 70%);
 }
 
-.fb i, .twitter i, .google i {
-  margin-right: 8px;
-}
 .image-container img {
   width: 100%;
-  height:350px;
+  height: 350px;
   object-fit: cover;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+  margin-bottom: 19px;
 }
+
+footer {
+  background-color: hsl(338, 46.6666666667%, 70%);
+  color: white;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  padding: 11px;
+  width: 100%;
+  font-size: medium;
+  text-align: center;
+  margin-top: 10px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 576px) {
+  footer {
+    font-size: small;
+    padding: 15px;
+  }
+  footer p, footer h6 {
+    margin: 5px 0;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  footer {
+    font-size: medium;
+    padding: 20px;
+  }
+}
+@media (min-width: 768px) {
+  footer {
+    font-size: large;
+    padding: 25px;
+  }
+}
+
+.login-button {
+  background-color: #f8c6d8;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.login-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f4b5cd;
+}
+
+/*# sourceMappingURL=loginPage.css.map */
