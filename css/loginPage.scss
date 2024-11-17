@@ -1,0 +1,291 @@
+$primary-bg-color: hsl(338, 46.6666666667%, 70%);
+$hover-bg-color: rgb(229, 172, 193);
+$active-bg-color: hsl(338, 42.1686746988%, 58.5%);
+$text-color: white;
+$title-bg-color: #f5c6d2;
+$button-bg-color: #db5088;
+$button-hover-bg-color: #b9456d;
+$input-bg-color: #f9f9f9;
+$input-focus-bg-color: #e8f0fe;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+  background-color: $primary-bg-color;
+
+  a {
+    padding: 0 12px;
+    text-align: center;
+    color: $text-color;
+    text-decoration: underline;
+    font-size: 17px;
+    line-height: 60px;
+    width: 16.66%;
+    font-family: inherit;
+
+    &:hover {
+      background-color: $hover-bg-color;
+    }
+  }
+
+  .active {
+    background-color: $active-bg-color;
+  }
+
+  .menu-toggle,
+  .menu-icon {
+    display: none;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    color: $text-color;
+    cursor: pointer;
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+    background-color: #555;
+  }
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    height: auto;
+
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.open-modal-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: $text-color;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $active-bg-color;
+  z-index: 1000;
+
+  &:target {
+    display: block;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: floralwhite;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      text-decoration: none;
+      color: #333;
+
+      &:hover {
+        color: #555;
+      }
+    }
+  }
+}
+
+.title {
+  background-color: $title-bg-color;
+  margin: 25px;
+  padding: 16px;
+  color: #333;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+    padding: 12px;
+    margin: 15px;
+  }
+}
+
+form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+
+  h1, p {
+    text-align: center;
+    color: $button-bg-color;
+    font-size: 1.5rem;
+
+    @media (max-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input[type="text"], 
+  input[type="password"], 
+  input[type="email"], 
+  input[type="tel"], 
+  input[type="date"], 
+  select {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 19px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: $input-bg-color;
+    font-size: 1rem;
+
+    &:focus {
+      background-color: $input-focus-bg-color;
+      outline: none;
+    }
+  }
+}
+
+button, 
+.submit-button {
+  background-color: $button-bg-color;
+  color: $text-color;
+  padding: 13px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $button-hover-bg-color;
+  }
+}
+
+.fb, .twitter, .google {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  text-align: center;
+  color: $text-color;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-size: 1rem;
+
+  &.fb {
+    background-color: hsl(221, 62.5%, 60%);
+  }
+
+  &.twitter {
+    background-color: hsl(203, 90%, 70%);
+  }
+
+  &.google {
+    background-color: hsl(7, 99%, 70%);
+  }
+}
+
+.image-container {
+  img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+    margin-bottom: 19px;
+  }
+}
+
+footer {
+  background-color: $primary-bg-color;
+  color: $text-color;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  padding: 11px;
+  width: 100%;
+  font-size: medium;
+  text-align: center;
+  margin-top: 10px;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  @media (max-width: 576px) {
+    font-size: small;
+    padding: 15px;
+
+    p, h6 {
+      margin: 5px 0;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    font-size: medium;
+    padding: 20px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: large;
+    padding: 25px;
+  }
+}
+
+.login-button {
+    background-color: #f8c6d8;
+    color: $text-color;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      background-color: #f4b5cd;
+    }
+  }

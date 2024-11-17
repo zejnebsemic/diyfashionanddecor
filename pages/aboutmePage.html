@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/aboutmePage.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <title>About Us Page</title>
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="/pages/index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="/pages/tutorials.html" target="_blank"><i class="fa fa-fw fa-lightbulb-o"></i> Tutorials</a>
+    <a class="active"  href="/pages/aboutmePage.html" target="_blank"><i class="fa fa-fw fa-user"></i> About Us</a>
+    <a href="/pages/loginPage.html"><i class="fa fa-fw fa-sign-in"></i> Log In</a>
+    <a href="#contactModal" class="open-modal-button">Contact Us</a>
+  </div>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <h5 class="modal-title">Contact Us</h5>
+        <form>
+            <div class="form-group">
+                <label for="contactName">Name</label>
+                <input type="text" id="contactName" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="contactEmail">Email address</label>
+                <input type="email" id="contactEmail" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" rows="3" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
+</div>
+    
+    <div class="aboutsection">
+      <h1>Get To Know Us</h1>
+      <h3>Welcome to Crafted With Love, where creativity meets innovation! Founded by a DIY enthusiast, Zejneb Semic, this platform is dedicated to providing you with unique fashion and home decor ideas. Led by my mentor, Professor Amela Vatres, we strive to inspire a community that values creativity, sustainability, and self-expression. Dive into the world of DIY and discover how simple projects can add some personal charm to your life.</h3>
+  </div>
+  <h2 class="section-title">Meet Our Team</h2>
+  <div class="aboutus-container">
+      <div class="aboutuscards">
+          <div class="flip-card">
+              <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                      <img src="/img/avatar.avif" alt="Zejneb Semic" style="width:100%; height:100%;">
+                  </div>
+                  <div class="flip-card-back">
+                      <h2>Zejneb Semic</h2>
+                      <p class="title">CEO & Founder</p>
+                      <p>Zejneb is a first year IT student at Burch International University who brings her love of technology and creativity to every project she undertakes. She founded Crafted With Love to inspire others to explore DIY fashion and interiors with a personal touch.</p> <br>
+                      <p>Conntact at: <a style="color: #df50a3; "href="mailto:zejneb.semic@stu.ibu.edu.ba">zejneb.semic@stu.ibu.edu.ba</a></p>
+                    </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="aboutuscards">
+          <div class="flip-card">
+              <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                      <img src="/img/avatar4.avif" alt="Vildana Delibasic" style="width:100%; height:100%;">
+                  </div>
+                  <div class="flip-card-back">
+                      <h2>Vildana Delibasic</h2>
+                      <p class="title">Art Director</p>
+                      <p>Sharing Zejneb's passion for crafts, Vildana is the creative director of Crafted With Love. Vildana, who is also a first-year IT student at Burch International University, discovered her love for crafts while exploring creative ways to reuse clothing and home decor items. Her art background and aesthetic sense perfectly complement Zejneb's technical skills.</p>
+                      <p>Conntact at: <a style="color: #df50a3; "href="mailto:vildana.delibasic@stu.ibu.edu.ba">vildana.delibasic@stu.ibu.edu.ba</a></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="aboutuscards">
+          <div class="flip-card">
+              <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                      <img src="/img/avatar3.avif" alt="Professor Amela Vatres" style="width:100%; height:100%;">
+                  </div>
+                  <div class="flip-card-back">
+                      <h2>Professor Amela Vatres</h2>
+                      <p class="title">Manager</p>
+                       <p>Support for this creative idea has been provided by CWL Manager, Professor Amela Vatres. With a background in business and education, Professor Vatres plays a key role in guiding Zejneb and Vildana, her role extends beyond management: she is a mentor, advisor and advocate for their vision, guiding them to transform their passion for DIY into a thriving community.</p>
+                      <p>Conntact at: <a style="color: #df50a3";  href="mailto:amela.vatres@ibu.edu.ba">amela.vatres@ibu.edu.ba</a></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    
+   
+      <footer class="text-center py-4">
+        <p>Zejneb Semic</p>
+        <p><a href="mailto:zejneb.semic@stu.ibu.edu.ba">zejneb.semic@stu.ibu.edu.ba</a></p>
+        <p class="department fw-bold">IT Department</p>
+        <p class="course fw-bold">Foundations of Web Development</p>
+        <h6>©2024 Copyright: Zejneb Semic</h6>
+    </footer>
+</body>
+</html>
