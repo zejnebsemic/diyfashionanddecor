@@ -299,15 +299,15 @@ footer a {
 }
 
 body.default-theme {
-    background-color: white;
+    background-color:#fef6eb;
     color: #978f8f;
   }
   body.dark-theme {
-    background-color:rgb(0, 0, 0);
+    background-color:hwb(0 29% 71%);
     color: white;
   }
   body.light-theme {
-    background-color:#fef6eb;
+    background-color:white;
     color: #333;
   }
   body.large-text-theme {
@@ -405,4 +405,76 @@ body.default-theme {
 .toggle-button:hover {
     background-color: #b9456d;
 }
+.faq-container {
+    width: 100%; 
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fcd4e0;
+    border: 1px solid #f3a7c7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
+.faq-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #973b5f;
+    font-size: 2rem;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-button {
+    background-color: #e79cb8;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #f3d5e1;
+}
+
+.accordion-button:hover,
+.accordion-button.active {
+    background-color: #702d46;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px 20px;
+    background-color: #fce8f0;
+    border: 1px solid #f3a7c7;
+    border-top: none;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.accordion-content a {
+    color: hsl(338, 28%, 34%);
+    text-decoration: underline;
+}
+
+.accordion-content p {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.accordion-content {
+    animation: fadeIn 0.5s ease-in-out;
+    border: 1px solid #f3a7c7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
