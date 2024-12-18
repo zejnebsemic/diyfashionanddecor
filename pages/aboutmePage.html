@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/aboutmePage.css">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 </head>
     <title>About Us Page</title>
 
@@ -29,15 +30,15 @@
         <form>
             <div class="form-group">
                 <label for="contactName">Name</label>
-                <input type="text" id="contactName" placeholder="Your Name" required>
+                <input type="text" id="contactName" placeholder="Your Name">
             </div>
             <div class="form-group">
                 <label for="contactEmail">Email address</label>
-                <input type="email" id="contactEmail" placeholder="Your Email" required>
+                <input type="email" id="contactEmail" placeholder="Your Email">
             </div>
             <div class="form-group">
                 <label for="contactMessage">Message</label>
-                <textarea id="contactMessage" rows="3" placeholder="Your Message" required></textarea>
+                <textarea id="contactMessage" rows="3" placeholder="Your Message"></textarea>
             </div>
             <button type="submit" class="submit-button">Send Message</button>
         </form>
@@ -98,15 +99,52 @@
           </div>
       </div>
   </div>
-
-    
-   
-      <footer class="text-center py-4">
+     <footer class="text-center py-4">
         <p>Zejneb Semic</p>
         <p><a href="mailto:zejneb.semic@stu.ibu.edu.ba">zejneb.semic@stu.ibu.edu.ba</a></p>
         <p class="department fw-bold">IT Department</p>
         <p class="course fw-bold">Foundations of Web Development</p>
         <h6>©2024 Copyright: Zejneb Semic</h6>
     </footer>
+
+    <script>
+        $(document).ready(function () {
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": true,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": true,
+                "showDuration": "500",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            };
+    
+            $('form').on('submit', function (e) {
+                e.preventDefault(); 
+    
+                const name = $('#contactName').val().trim();;
+                const email = $('#contactEmail').val().trim();;
+                const message = $('#contactMessage').val().trim();;
+    
+                if (name && email && message) {
+                    toastr.success("Your message has been sent successfully!");
+                    $('#contactName').val('');
+                    $('#contactEmail').val('');
+                    $('#contactMessage').val('');
+                } else {
+                    toastr.error("All fields are required. Please complete the form.");
+                }
+            });
+        });
+    </script>
+    
+
 </body>
 </html>
