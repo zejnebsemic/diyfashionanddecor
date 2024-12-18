@@ -378,3 +378,31 @@ body.default-theme {
         font-size: 12px;
     }
 }
+
+.team-description {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.short-desc, .full-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #555;
+}
+
+.toggle-button {
+    background-color: #db5088;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #b9456d;
+}
+
