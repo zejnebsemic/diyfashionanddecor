@@ -11,10 +11,18 @@
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
         <div class="navbar">
             <a href="/pages/index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-            <a href="/pages/tutorials.html" target="_blank"><i class="fa fa-fw fa-lightbulb-o"></i> Tutorials</a>
-            <a href="/pages/aboutmePage.html" target="_blank"><i class="fa fa-fw fa-user"></i> About Us</a>
+            <a href="/pages/tutorials.html" ><i class="fa fa-fw fa-lightbulb-o"></i> Tutorials</a>
+            <a href="/pages/aboutmePage.html"><i class="fa fa-fw fa-user"></i> About Us</a>
             <a class="active" href="/pages/loginPage.html"><i class="fa fa-fw fa-sign-in"></i> Log In</a>
             <a href="#contactModal" class="open-modal-button">Contact Us</a>
+            <div class="theme-switcher">
+              <label for="theme-selector">Choose Theme:</label>
+              <select id="theme-selector">
+                <option value="default">Default</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+              </select>
+            </div>
         </div>
     
         <div id="contactModal" class="modal">
@@ -137,5 +145,25 @@
     </footer>
     
   </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const themeSelector = document.getElementById('theme-selector');
+        const savedTheme = localStorage.getItem('theme') || 'default';
+
+        document.body.className = `${savedTheme}-theme`;
+        themeSelector.value = savedTheme;
+
+        themeSelector.addEventListener('change', function () {
+            const selectedTheme = themeSelector.value;
+
+            document.body.className = '';
+            document.body.classList.add(`${selectedTheme}-theme`);
+
+            localStorage.setItem('theme', selectedTheme);
+        });
+    });
+    </script>
 </body>
 </html>
