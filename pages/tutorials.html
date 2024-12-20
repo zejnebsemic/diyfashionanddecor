@@ -208,61 +208,11 @@
         
             <div class="clearfix"></div>
         </div>
-
-    <div class="video-container">
-        <h2>You can also find some other ideas for clothes on these videos: </h2> <br>
-        <video width="400" height="400" controls>
-            <source src="/videos/video.mp4" type="video/mp4">
-            <source src="/videos/video.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-        </video>
-        <video width="400" height="400" controls>
-            <source src="/videos/videoo2.mp4" type="video/mp4">
-            <source src="/videos/videoo2.mp4" type="video/ogg">
-            Your browser does not support the video tag.
-        </video>
-        <video width="400" height="400" controls>
-            <source src="/videos/video3.mp4" type="video/mp4">
-            <source src="/videos/video3.mp4" type="video/ogg">
-            Your browser does not support the video tag.
-        </video> 
-        <br>
-        <div class="video-container">
-            <h2>You can also find some other ideas for home decor on these videos: </h2> <br>
-            <video width="400" height="400" controls>
-                <source src="/videos/video4.mp4" type="video/mp4">
-                <source src="/videos/video4.mp4" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
-            <video width="400" height="400" controls>
-                <source src="/videos/video5.mp4" type="video/mp4">
-                <source src="/videos/video5.mp4" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
-            <video width="400" height="400" controls>
-                <source src="/videos/video6.mp4" type="video/mp4">
-                <source src="/videos/video6.mp4" type="video/ogg">
-                Your browser does not support the video tag.
-            </video> <br>
-            <div class="video-container">
-                <h2>You can also find some other ideas for gift ideas on these videos: </h2> <br>
-                <video width="400" height="400" controls>
-                    <source src="/videos/video7.mp4" type="video/mp4">
-                    <source src="/videos/video7.mp4" type="video/ogg">
-                    Your browser does not support the video tag.
-                </video>
-                <video width="400" height="400" controls>
-                    <source src="/videos/video8.mp4" type="video/mp4">
-                    <source src="/videos/video8.mp4" type="video/ogg">
-                    Your browser does not support the video tag.
-                </video>
-                <video width="400" height="400" controls>
-                    <source src="/videos/video9.mp4" type="video/mp4">
-                    <source src="/videos/video9.mp4" type="video/ogg">
-                    Your browser does not support the video tag.
-                </video> <br>
-    </div>
-
+        <section class="video-container" id="video-container">
+            <h2>Our Latest Video Tutorials</h2>
+            <div id="videos"> </div>
+        </section>
+        
     
 <footer class="text-center py-4">
     <p>Zejneb Semic</p>
@@ -336,5 +286,57 @@
         });
     });
     </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const videoContainer = document.querySelector(".video-container");
+
+    fetch("/data/videos.json")
+        .then(response => response.json())
+        .then(videos => {
+            const groupedVideos = videos.reduce((groups, video) => {
+                if (!groups[video.category]) {
+                    groups[video.category] = [];
+                }
+                groups[video.category].push(video);
+                return groups;
+            }, {});
+
+            for (const [category, videos] of Object.entries(groupedVideos)) {
+                const categorySection = document.createElement("div");
+                categorySection.classList.add("category-section");
+
+                const categoryTitle = document.createElement("h2");
+                categoryTitle.textContent = category;
+                categoryTitle.classList.add("category-title");
+                categorySection.appendChild(categoryTitle);
+
+                const videosWrapper = document.createElement("div");
+                videosWrapper.classList.add("videos-wrapper");
+
+                videos.forEach(video => {
+                    const videoElement = document.createElement("div");
+                    videoElement.classList.add("video-wrapper");
+                    videoElement.innerHTML = `
+                        <video controls>
+                            <source src="${video.source}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>${video.description}</p>
+                    `;
+                    videosWrapper.appendChild(videoElement);
+                });
+
+                categorySection.appendChild(videosWrapper);
+                videoContainer.appendChild(categorySection);
+            }
+        })
+        .catch(error => console.error("Error loading videos:", error));
+});
+</script>
+
+
+
+
 </body>
 </html>
