@@ -477,3 +477,27 @@ body.default-theme {
 .full-img span:hover {
     color: #c38b9c; 
 }
+#weather-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: hsl(323, 52%, 78%);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#weather-info h4 {
+    color: #6c757d;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#weather-info p {
+    font-size: 1.2em;
+    margin: 5px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#weather-icon {
+    margin-top: 10px;
+}
