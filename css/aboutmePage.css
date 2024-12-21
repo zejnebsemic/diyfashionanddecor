@@ -478,3 +478,63 @@ body.default-theme {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+.voices-of-inspiration-section {
+    background-color:#e1b4c8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.voices-of-inspiration-section h2 {
+    color: #db5088;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+.inspiration-card {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: hsl(319, 43%, 31%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.inspiration-card h5 {
+    color: hsl(307, 39%, 46%);
+    font-weight: bold;
+}
+
+.inspiration-card .btn {
+    margin-right: 10px;
+}
+
+#add-voice {
+    display: block;
+    margin: 0 auto;
+    background-color: #db5088;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#add-voice:hover {
+    background-color: #b9456d;
+}
+.inspiration-card .btn-edit {
+    background-color: hsl(335, 66%, 73%); 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inspiration-card .btn-edit:hover {
+    background-color: hwb(335 37% 18%);
+}
+
+
