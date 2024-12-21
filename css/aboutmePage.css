@@ -161,9 +161,7 @@ html, body {
     padding: 50px;
     text-align: center;
     color: hsl(319, 44%, 53%);
-    margin-top: 14px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 14px;
     text-decoration: solid;
     background-color: hsl(322, 71%, 88%);
 }

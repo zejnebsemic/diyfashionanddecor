@@ -14,7 +14,7 @@ html, body {
     width: 100%;
     background-color:hwb(338 56% 16%);
     overflow:auto;
-}
+} 
 
 .navbar a {
     float: left;
@@ -93,14 +93,13 @@ html, body {
 footer {
     background-color: hwb(338 56% 16%);
     color: #fff;
-    position: relative;
     left: 0;
     bottom: 0;
-    padding: 10px;
+    padding: 20px;
     width: 100%;
     font-size: medium;
     text-align: center;
-    margin-top: 10px;
+    margin-top: auto;
     width:auto;
 }
 

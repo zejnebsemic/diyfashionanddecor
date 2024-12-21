@@ -93,3 +93,29 @@ function validatePhone(phone) {
     const regex = /^\d{10}$/;
     return regex.test(phone);
 }
+document.addEventListener('DOMContentLoaded', function () {
+    const themeSelector = document.getElementById('theme-selector');
+    const savedTheme = localStorage.getItem('theme') || 'default';
+
+    document.body.className = `${savedTheme}-theme`;
+    themeSelector.value = savedTheme;
+
+    themeSelector.addEventListener('change', function () {
+        const selectedTheme = themeSelector.value;
+
+        document.body.className = '';
+        document.body.classList.add(`${selectedTheme}-theme`);
+
+        localStorage.setItem('theme', selectedTheme);
+    });
+});
+
+const inputs = document.querySelectorAll("#contactForm input, #contactForm select");
+
+          inputs.forEach((input) => {
+            input.addEventListener("input", () => {
+                const result = document.getElementById("result");
+                result.textContent = ""; 
+                result.classList.remove("success-message");
+          });
+    });
