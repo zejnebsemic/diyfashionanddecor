@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Details</title>
+    <link rel="stylesheet" href="/css/tutorialdetails.css">
+</head>
+<body>
+    <div class="details-container">
+        <img id="detailImage" src="" alt="Detailed View">
+        <h2 id="detailTitle"></h2>
+        <p id="detailDescription"></p>
+        <a href="tutorials.html">Back to Tutorials</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("detailImage").src = params.get("imgSrc");
+        document.getElementById("detailTitle").textContent = params.get("title");
+        document.getElementById("detailDescription").textContent = params.get("description");
+    </script>
+</body>
+</html>
