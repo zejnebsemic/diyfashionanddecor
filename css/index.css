@@ -14,7 +14,7 @@ html, body {
     width: 100%;
     background-color:hwb(338 56% 16%);
     overflow:auto;
-}
+} 
 
 .navbar a {
     float: left;
@@ -93,14 +93,13 @@ html, body {
 footer {
     background-color: hwb(338 56% 16%);
     color: #fff;
-    position: relative;
     left: 0;
     bottom: 0;
-    padding: 10px;
+    padding: 20px;
     width: 100%;
     font-size: medium;
     text-align: center;
-    margin-top: 10px;
+    margin-top: auto;
     width:auto;
 }
 
@@ -152,43 +151,6 @@ footer a {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
   
-#slideshow {
-    text-align: center;
-    overflow: hidden;
-    height: 510px;
-    width:auto;
-    margin: 0 auto;
-  }
-  
-  .slide-wrapper {
-    width: 5096px;  
-    animation: slide 21s ease infinite;  
-  }
-  
-  .slide {
-    float: left;
-    height: 510px;
-    width: 728px;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  
-  }
-  
-  @keyframes slide {
-    14% {margin-left: 0px;}
-    21% {margin-left: -728px;}
-    35% {margin-left: -728px;}
-    42% {margin-left: -1456px;}
-    56% {margin-left: -1456px;}
-    63% {margin-left: -2184px;}
-    77% {margin-left: -2184px;}
-    84% {margin-left: -2912px;}
-    98% {margin-left: -2912px;}
-    100% {margin-left: -3640px;}
-  }
   #naslov {
     text-align: center; 
     padding: 20px; 
@@ -353,3 +315,188 @@ p {
     }
 }
 
+body.default-theme {
+    background-color: #fef6eb;
+    color: #978f8f;
+  }
+  body.dark-theme {
+    background-color:hwb(0 29% 71%);
+    color: white;
+  }
+  body.light-theme {
+    background-color:white;
+    color: #333;
+  }
+  body.large-text-theme {
+    font-size: 1.2em;
+  }
+  .theme-switcher {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    font-size: 17px;
+    width: 16.66%; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.theme-switcher label {
+    margin-right: 8px;
+    font-size: 16px;
+    color: white;
+}
+
+.theme-switcher select {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e1b4c8;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-switcher select:focus {
+    outline: none;
+    border: 1px solid #c77d99;
+}
+
+@media (max-width: 768px) {
+    .theme-switcher {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .theme-switcher select {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .theme-switcher label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .theme-switcher {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .theme-switcher label {
+        display: none; 
+    }
+
+    .theme-switcher select {
+        width: 100%; 
+        font-size: 12px;
+    }
+}
+.img-gallery {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.img-gallery img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-gallery img:hover {
+    transform: scale(0.9) rotate(-5deg);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-content-custom {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.description {
+    flex: 1; 
+    color:antiquewhite;
+    font-size:large;
+    line-height: 1.5;
+    padding-right: 30px; 
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    max-width: 100%; 
+    height: auto;
+    object-fit: contain; 
+    border-radius: 0; 
+}
+
+.full-img span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.full-img span:hover {
+    color: #c38b9c; 
+}
+#weather-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(222, 155, 167);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#weather-info h4 {
+    color: #6c757d;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#weather-info p {
+    font-size: 1.2em;
+    margin: 5px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#weather-icon {
+    margin-top: 10px;
+}
