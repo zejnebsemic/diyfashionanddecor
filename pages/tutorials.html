@@ -4,32 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorials Page</title>
-    <link rel="stylesheet" href="/css/tutorials.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/tutorials.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    
-    <style>
-        .section {
-          padding: 60px 20px;
-          color: white;
-          margin-top: 10px;
-          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-       #section1 { background-color: #973b5f; }
-       #section2 { background-color: #973b5f; }
-       #section3 { background-color:#973b5f; }
-    </style>
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
     <div class="navbar">
-        <a href="/pages/index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a class="active" href="/pages/tutorials.html"><i class="fa fa-fw fa-lightbulb-o"></i> Tutorials</a>
-        <a href="/pages/aboutmePage.html" ><i class="fa fa-fw fa-user"></i> About Us</a>
-        <a href="/pages/loginPage.html"><i class="fa fa-fw fa-sign-in"></i> Log In</a>
+        <a href="../index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a class="active" href="../pages/tutorials.html"><i class="fa fa-fw fa-lightbulb-o"></i> Tutorials</a>
+        <a href="../pages/aboutmePage.html"><i class="fa fa-fw fa-user"></i> About Us</a>
+        <a href="../pages/loginPage.html"><i class="fa fa-fw fa-sign-in"></i> Log In</a>
         <a href="#contactModal" class="open-modal-button">Contact Us</a>
         <div class="theme-switcher">
             <label for="theme-selector">Choose Theme:</label>
@@ -62,11 +48,12 @@
             </form>
         </div>
     </div>
+
     <div class="maincontainer2">
         <div class="col-12 image-container">
-            <img src="/img/bannerTutorials.jpeg" alt="Banner image" class="img-fluid">
+            <img src="../assets/img/bannerTutorials.jpeg" alt="Banner image" class="img-fluid">
         </div>
-        <h1 class="heading3" >Creative: Step-by-Step DIY Tutorials for Fashion and Decor</h1>
+        <h1 class="heading3">Creative: Step-by-Step DIY Tutorials for Fashion and Decor</h1>
         <div class="row1">
             <div class="standard-column">
                 Welcome to our Tutorials page! Here, you'll find a curated collection of DIY projects designed to inspire and guide you in transforming everyday items into unique fashion and decor pieces.
@@ -79,151 +66,143 @@
         <div id="section1" class="section">
             <h1>Welcome to our Fashion DIY section!</h1> <br>
             <p><strong>Clothing Customization- Personalize your clothes according to your individual preferences.</strong></p>
-            <p><strong>CUpcycled Treasures- Transform your old things into valuable creations.</strong></p>
+            <p><strong>Upcycled Treasures- Transform your old things into valuable creations.</strong></p>
             <p><strong>Sustainable Fashion- Sustainable clothing with a focus on durability.</strong></p>
         </div>
     
         <div class="gallery-container">
             <div class="responsive">
                 <div class="gallery">
-                    <img src="/img/fashion1pic.jpeg" alt="Clothing Customization" width="350" height="400">
+                    <img src="../assets/img/fashion1pic.jpeg" alt="Clothing Customization" width="350" height="400">
                     <div class="desc">A concise guide to DIY clothing customization, featuring embroidery on shirts and denim painting.</div>
-                    <button class="view-more" onclick="viewMore('/img/fashion1pic.jpeg', 'Clothing Customization', 'Prepare materials: Gather a plain t-shirt, embroidery floss, needles, and fabric markers. Sketch your design lightly with chalk as a guide. Embroider using simple stitches like backstitch or satin stitch for clean lines. Add texture with layered or smaller stitches. For denim, use an embroidery hoop for stability or fabric paint for bold designs. Let your project dry for 24 hours and heat-set the paint for lasting results.')">View More</button>
+                    <button class="view-more" onclick="viewMore('../assets/img/fashion1pic.jpeg', 'Clothing Customization', 'Prepare materials: Gather a plain t-shirt, embroidery floss, needles, and fabric markers. Sketch your design lightly with chalk as a guide. Embroider using simple stitches like backstitch or satin stitch for clean lines. Add texture with layered or smaller stitches. For denim, use an embroidery hoop for stability or fabric paint for bold designs. Let your project dry for 24 hours and heat-set the paint for lasting results.')">View More</button>
                 </div>
             </div>
 
-        <div class="responsive">
-            <div class="gallery">
-                <img src="/img/fashion2Pic.jpeg" alt="Upcycled Treasures" width="350" height="400">
-                <div class="desc">Transform old clothes into unique, fashion-forward creations.</div>
-                <button class="view-more" 
-                    onclick="viewMore('/img/fashion2Pic.jpeg', 'Upcycled Treasures', 
-                    'Gather tools: Collect old sweaters, scissors, embroidery patches, threads, needles, and buttons. Prepare the sweater: Cut unwanted sections or areas to attach patches. Add patches: Sew fabric patches or embroidery pieces onto worn sections, securing edges with stitching.')">
-                    View More
-                </button>
+            <div class="responsive">
+                <div class="gallery">
+                    <img src="../assets/img/fashion2Pic.jpeg" alt="Upcycled Treasures" width="350" height="400">
+                    <div class="desc">Transform old clothes into unique, fashion-forward creations.</div>
+                    <button class="view-more" onclick="viewMore('../assets/img/fashion2Pic.jpeg', 'Upcycled Treasures', 'Gather tools: Collect old sweaters, scissors, embroidery patches, threads, needles, and buttons. Prepare the sweater: Cut unwanted sections or areas to attach patches. Add patches: Sew fabric patches or embroidery pieces onto worn sections, securing edges with stitching.')">View More</button>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <img src="../assets/img/fashion3Pic.jpeg" alt="Eco-friendly Fashion" width="350" height="400">
+                    <div class="desc">Step-by-step guide for natural dyeing a T-shirt with vibrant colors.</div>
+                    <button class="view-more" onclick="viewMore('../assets/img/fashion3Pic.jpeg', 'Eco-friendly Fashion', 'Prepare materials: T-shirt, natural dye ingredients (e.g., turmeric, spinach, or berries). Boil dyes and soak the shirt for vibrant eco-friendly colors. Let dry and heat-set for lasting results.')">View More</button>
+                </div>
             </div>
         </div>
-          
-        <div class="responsive">
-            <div class="gallery">
-                <img src="/img/fashion3Pic.jpeg" alt="Eco-friendly Fashion" width="350" height="400">
-                <div class="desc">Step-by-step guide for natural dyeing a T-shirt with vibrant colors.</div>
-                <button class="view-more" 
-                    onclick="viewMore('/img/fashion3Pic.jpeg', 'Eco-friendly Fashion', 
-                    'Prepare materials: T-shirt, natural dye ingredients (e.g., turmeric, spinach, or berries). Boil dyes and soak the shirt for vibrant eco-friendly colors. Let dry and heat-set for lasting results.')">
-                    View More
-                </button>
-            </div>
-        </div>
-          
-        
         <div id="section2" class="section">
             <h1>Welcome to our Home Decor section!</h1> <br>
             <p><strong>Wall Art Wonders- A unique work that enhances the space on the wall and personalizes.</strong></p>
             <p><strong>Cozy Textiles- Soft and comfort fabric for warmth and style.</strong></p>
             <p><strong>Seasonal Decor- Decorations that celebrate and reflect each season of the year.</strong></p>
         </div>
+
         <div class="gallery-container">
             <div class="responsive">
                 <div class="gallery">
-                    <img src="/img/decor1Pic.jpeg" alt="Wall Art" width="350" height="400">
+                    <img src="../assets/img/decor1Pic.jpeg" alt="Wall Art" width="350" height="400">
                     <div class="desc">Here is the step-by-step instructional illustration for painting a DIY flower mural on the wall.</div>
                     <button class="view-more" 
-                        onclick="viewMore('/img/decor1Pic.jpeg', 'Wall Art Wonders', 
+                        onclick="viewMore('../assets/img/decor1Pic.jpeg', 'Wall Art Wonders', 
                         'Sketch your design lightly on the wall using a pencil. Outline large sections first. Use acrylic paint and layer colors to add depth. Let each layer dry before adding details. Finish with a clear sealant for protection.')">
                         View More
                     </button>
                 </div>
             </div>
-    
+
             <div class="responsive">
                 <div class="gallery">
-                    <img src="/img/decor2Pic.jpeg" alt="Homemade Pillows" width="350" height="400">
+                    <img src="../assets/img/decor2Pic.jpeg" alt="Homemade Pillows" width="350" height="400">
                     <div class="desc">Here’s the step-by-step instructional illustration for making homemade pillows.</div>
                     <button class="view-more" 
-                        onclick="viewMore('/img/decor2Pic.jpeg', 'Homemade Pillows', 
+                        onclick="viewMore('../assets/img/decor2Pic.jpeg', 'Homemade Pillows', 
                         'Cut two pieces of fabric to your desired size. Place the fabric pieces together, right sides facing inwards. Sew along three edges, turn the pillow inside out, stuff it with filling, and sew the final edge closed.')">
                         View More
                     </button>
                 </div>
             </div>
-              
+
             <div class="responsive">
                 <div class="gallery">
-                    <img src="/img/decor3Pic.jpeg" alt="DIY Ornament" width="350" height="400">
+                    <img src="../assets/img/decor3Pic.jpeg" alt="DIY Ornament" width="350" height="400">
                     <div class="desc">Here is the step-by-step instructional illustration for creating an ornament for a Christmas tree.</div>
                     <button class="view-more" 
-                        onclick="viewMore('/img/decor3Pic.jpeg', 'DIY Christmas Ornament', 
+                        onclick="viewMore('../assets/img/decor3Pic.jpeg', 'DIY Christmas Ornament', 
                         'Gather materials: clear ornaments, paints, glitters, and ribbons. Paint the ornaments using brushes or sponges. Add glitter and allow to dry. Tie a ribbon through the top loop for hanging. Decorate with patterns or stickers for a festive look.')">
                         View More
                     </button>
                 </div>
             </div>
-            
-            <div class="clearfix"></div>
         </div>
-        
+
         <div id="section3" class="section">
             <h1>Welcome to our Personalized Gifts section!</h1> <br>
             <p><strong>Custom Mugs and Glassware- Personalised glasses that reflect your personal style.</strong></p>
             <p><strong>Unique Photo Frames- Unique frames represent cherished memories.</strong></p>
             <p><strong>Keepsake Boxes- Decorative storage for valuables and keepsakes.</strong></p>
         </div>
-        
+
         <div class="gallery-container">
             <div class="responsive">
                 <div class="gallery">
-                    <img src="/img/giftsPic1.jpeg" alt="Custom Mugs" width="350" height="400">
+                    <img src="../assets/img/giftsPic1.jpeg" alt="Custom Mugs" width="350" height="400">
                     <div class="desc">Here are the step-by-step instructional illustrations for hand-painting a mug.</div>
                     <button class="view-more" 
-                        onclick="viewMore('/img/giftsPic1.jpeg', 'Custom Mugs', 
+                        onclick="viewMore('../assets/img/giftsPic1.jpeg', 'Custom Mugs', 
                         'Gather materials: ceramic mug, paint, brushes, and sealant. Paint your design on the mug, let it dry completely, and apply a sealant. Bake in the oven at 350°F for 30 minutes to set the paint.')">
                         View More
                     </button>
                 </div>
             </div>
-    
+
             <div class="responsive">
                 <div class="gallery">
-                    <img src="/img/giftsPic2.jpeg" alt="DIY Photo Frame" width="350" height="400">
-                    <div class="desc">Here’s the step-by-step instructional illustration for creating a unique DIY photo frameame.</div>
+                    <img src="../assets/img/giftsPic2.jpeg" alt="DIY Photo Frame" width="350" height="400">
+                    <div class="desc">Here’s the step-by-step instructional illustration for creating a unique DIY photo frame.</div>
                     <button class="view-more" 
-                        onclick="viewMore('/img/giftsPic2.jpeg', 'DIY Photo Frame', 
+                        onclick="viewMore('../assets/img/giftsPic2.jpeg', 'DIY Photo Frame', 
                         'Paint the wooden photo frame with your favorite colors. Add decorative elements such as beads, buttons, or glitter. Allow everything to dry and seal with a clear varnish.')">
                         View More
                     </button>
                 </div>
             </div>
-              
+
             <div class="responsive">
                 <div class="gallery">
-                    <img src="/img/giftsPic3.jpeg" alt="DIY Jewelry Box" width="350" height="400">
+                    <img src="../assets/img/giftsPic3.jpeg" alt="DIY Jewelry Box" width="350" height="400">
                     <div class="desc">Here are the step-by-step instructional illustrations for crafting a jewelry box.</div>
                     <button class="view-more" 
-                        onclick="viewMore('/img/giftsPic3.jpeg', 'DIY Jewelry Box', 
+                        onclick="viewMore('../assets/img/giftsPic3.jpeg', 'DIY Jewelry Box', 
                         'Gather materials: a plain box, decorative paper, paints, and glue. Paint or cover the box with your design, add compartments, and finish with embellishments like beads or stickers.')">
                         View More
                     </button>
                 </div>
             </div>
-        
-            <div class="clearfix"></div>
         </div>
+
         <section class="video-container" id="video-container">
             <h2>Our Latest Video Tutorials</h2>
             <div id="videos"> </div>
         </section>
+    </div>
+
         
-    
-<footer class="text-center py-4">
-    <p>Zejneb Semic</p>
-    <p><a href="mailto:zejneb.semic@stu.ibu.edu.ba">zejneb.semic@stu.ibu.edu.ba</a></p>
-    <p class="department fw-bold">IT Department</p>
-    <p class="course fw-bold">Foundations of Web Development</p>
-    <h6>©2024 Copyright: Zejneb Semic</h6>
-</footer>
-<script src="/js/tutorials.js"></script>
+        <footer class="text-center py-4">
+            <p>Zejneb Semic</p>
+            <p><a href="mailto:zejneb.semic@stu.ibu.edu.ba">zejneb.semic@stu.ibu.edu.ba</a></p>
+            <p class="department fw-bold">IT Department</p>
+            <p class="course fw-bold">Foundations of Web Development</p>
+            <h6>©2024 Copyright: Zejneb Semic</h6>
+        </footer>
 
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../assets/js/tutorials.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
